@@ -1,6 +1,49 @@
 body {
   font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
+
+body > * {
+  padding-left: 2.5%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bg-grey {
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-top: 10px;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 /*
 --- Color --- 
 bleu #0065FC
