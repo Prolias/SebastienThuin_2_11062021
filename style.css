@@ -7,12 +7,34 @@ body {
 
 body > * {
   padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
-footer {
+header {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+
+nav li {
+  margin-top: 0;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .bg-grey {
@@ -37,11 +59,26 @@ li {
 .row-flex {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .col-flex {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#active {
+  border-top: 3px solid #0065fc;
+}
+
+#active a {
+  color: #0065fc;
+}
+
+#register {
+  color: #0065fc;
+  font-weight: bold;
 }
 
 /*
