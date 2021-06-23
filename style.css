@@ -108,10 +108,13 @@ li {
 
 #hebergement {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #hebergement > section {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 #heberge {
@@ -121,6 +124,19 @@ li {
 
 #popular {
   flex-grow: 1;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card-col {
@@ -136,7 +152,7 @@ li {
   margin-bottom: 20px;
 }
 
-.card-media {
+.card-col > .card-media {
   display: block;
   background-size: cover;
   background-position: 50%;
@@ -145,22 +161,53 @@ li {
   height: 115px;
 }
 
-.cards-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.card-content {
+.card-col > .card-content {
   display: flex;
   flex-direction: column;
   margin: 5px;
 }
 
-.card-content > div {
+.card-col > .card-content > div {
   padding: 5px;
 }
 
 .card-rate > i {
   font-size: 12px;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 500px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-row .card-text {
+  font-size: 12px;
+}
+
+.card-row > .card-media {
+  display: block;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 15px 0 0 15px;
+  width: 125px;
+  height: 140px;
+}
+
+.card-row > .card-content {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 150px;
+}
+
+.card-row > .card-content > div {
+  padding: 5px;
 }
