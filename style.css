@@ -6,7 +6,6 @@
 .row-flex {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .col-flex {
@@ -114,6 +113,7 @@ li {
   padding: 25px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #heberge {
@@ -130,6 +130,9 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 15px;
 }
 
 .cards-flex {
@@ -170,10 +173,6 @@ li {
   padding: 5px;
 }
 
-.card-rate > i {
-  font-size: 12px;
-}
-
 .card-row {
   display: flex;
   flex-direction: row;
@@ -203,10 +202,21 @@ li {
 .card-row > .card-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 5px;
   width: 150px;
+  padding-left: 10px;
 }
 
-.card-row > .card-content > div {
+.card-row .card-main > div {
   padding: 5px;
+}
+
+.card-rate {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-rate > i {
+  font-size: 12px;
 }
