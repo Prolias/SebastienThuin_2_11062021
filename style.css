@@ -6,7 +6,6 @@
 .row-flex {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .col-flex {
@@ -32,7 +31,7 @@
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 /*
@@ -106,6 +105,42 @@ li {
   font-weight: bold;
 }
 
+#hebergement {
+  display: flex;
+}
+
+#hebergement > section {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#heberge {
+  margin-right: 10px;
+  flex-grow: 2;
+}
+
+#popular {
+  flex-grow: 1;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 15px;
+}
+
+.cards-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .card-col {
   display: flex;
   flex-direction: column;
@@ -114,16 +149,74 @@ li {
   max-width: 250px;
   padding: 5px;
   margin: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.card-img {
+.card-col > .card-media {
+  display: block;
+  background-size: cover;
+  background-position: 50%;
   border-radius: 15px 15px 0 0;
-  width: 100%;
-  max-height: 150px;
+  width: 250px;
+  height: 115px;
 }
 
-.cards-flex {
+.card-col > .card-content {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.card-col > .card-content > div {
+  padding: 5px;
+}
+
+.card-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 500px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-row .card-text {
+  font-size: 12px;
+}
+
+.card-row > .card-media {
+  display: block;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 15px 0 0 15px;
+  width: 125px;
+  height: 140px;
+}
+
+.card-row > .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+  width: 150px;
+  padding-left: 10px;
+}
+
+.card-row .card-main > div {
+  padding: 5px;
+}
+
+.card-rate {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-rate > i {
+  font-size: 12px;
 }
