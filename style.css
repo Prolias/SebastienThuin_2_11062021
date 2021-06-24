@@ -220,3 +220,45 @@ li {
 .card-rate > i {
   font-size: 12px;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 300px;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bolder;
+}
+
+.card .card-media {
+  display: block;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 15px 15px 0 0;
+  height: 160px;
+}
+
+.card .card-content {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.card-big {
+  grid-row: span 2;
+}
+
+.card-big .card-media {
+  height: 400px;
+}
