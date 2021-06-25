@@ -109,6 +109,10 @@ li {
   font-weight: bold;
 }
 
+.navbar {
+  display: flex;
+}
+
 /*
   Hébergement et plus populaires
 */
@@ -139,7 +143,6 @@ li {
   justify-content: space-between;
   font-size: 25px;
   font-weight: 900;
-  padding: 15px;
 }
 
 /*
@@ -170,10 +173,6 @@ li {
 
 .card-title {
   font-weight: 700;
-}
-
-.card-text {
-
 }
 
 .card-rate {
@@ -302,7 +301,7 @@ li {
   * Filters & recherche
 */
 
-#filter {
+#search {
   display: flex;
   flex-direction: column;
   margin: 25px;
@@ -314,6 +313,10 @@ li {
   font-weight: 900;
 }
 
+/*
+  Chips
+*/
+
 .chips {
   display: flex;
   align-items: center;
@@ -323,20 +326,20 @@ li {
   margin: 15px;
 }
 
-.chips-content {
-  margin-left: 10px;
-  margin-right: 15px;
-}
-
-.chips i {
+.chips-icon {
   background-color: #DEEBFF;
   color: #0065fc;
   padding: 1em;
   border-radius: 100%;
 }
 
+.chips-content {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
 /*
-  * Input group
+  Input-Group
 */
 
 .input-group {
@@ -379,6 +382,10 @@ li {
 .input-group button:hover {
   box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
 }
+
+/*
+  Info-Container
+*/
 
 .info-container {
   display: flex;
