@@ -278,6 +278,12 @@ li {
   * Filters & recherche
 */
 
+#filter {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
 .filters {
   display: flex;
   align-items: center;
@@ -312,6 +318,8 @@ li {
 .input-group {
   display: flex;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .input-group i {
