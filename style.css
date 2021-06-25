@@ -17,13 +17,20 @@
   border-radius: 25px;
 }
 
-
 .blue {
   color: #0065fc;
 }
 
 .light-blue {
   color: #DEEBFF;
+}
+
+.bg-blue {
+  background-color: #0065fc;
+}
+
+.bg-light-blue {
+  background-color: #DEEBFF;
 }
 
 .bg-grey {
@@ -104,6 +111,10 @@ li {
   color: #0065fc;
   font-weight: bold;
 }
+
+/*
+  * Hébergement et plus populaires
+*/
 
 #hebergement {
   display: flex;
@@ -261,4 +272,92 @@ li {
 
 .card-big .card-media {
   height: 400px;
+}
+
+/*
+  * Filters & recherche
+*/
+
+.filters {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid lightgrey;
+  border-radius: 50px;
+  margin: 15px;
+}
+
+.chips-content {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.chips i {
+  background-color: #DEEBFF;
+  color: #0065fc;
+  padding: 1em;
+  border-radius: 100%;
+}
+
+/*
+  * Input group
+*/
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 15px 0 0 15px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.input-group input {
+  border: 1px solid #f2f2f2;
+  height: 46px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.input-group button {
+  border: none;
+  background-color: #0065fc;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 700;
+  height: 50px;
+}
+
+.input-group button:hover {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-container i {
+  margin-right: 10px;
+  color: #0065fc;
+  border: 1px solid lightgrey;
+  border-radius: 100%;
+  font-size: 12px;
+  padding: 5px 9px 5px 9px;
 }
