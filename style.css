@@ -50,6 +50,14 @@ body > * {
   font-weight: 900;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 900;
+}
+
 /* 
   Header
 */
@@ -114,36 +122,29 @@ li {
 }
 
 /*
-  Hébergement et plus populaires
+  Hébergement et plus populaires et activite
 */
+
+#heberge, #popular {
+  padding: 40px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+}
 
 #hebergement {
   display: flex;
-}
-
-#hebergement > section {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
-#heberge {
-  margin-right: 10px;
-  flex-grow: 2;
+#activite {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-#popular {
-  flex-grow: 1;
+#activite .section-title {
+  padding-bottom: 20px;
 }
 
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 25px;
-  font-weight: 900;
-}
 
 /*
   Cards
@@ -183,9 +184,17 @@ li {
   * Card Type
 */
 
-.cards-flex {
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .card-row {
@@ -311,6 +320,7 @@ li {
   display: flex;
   align-items: center;
   font-weight: 900;
+  margin-bottom: 10px;
 }
 
 /*
