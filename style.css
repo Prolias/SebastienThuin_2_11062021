@@ -2,6 +2,8 @@
   Global
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   font-family: "Raleway", sans-serif;
   display: flex;
@@ -58,7 +60,7 @@ ul {
 }
 
 .bold {
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .section-title {
@@ -66,7 +68,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* 
@@ -126,7 +128,7 @@ nav {
 .filters {
   display: flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
@@ -141,6 +143,10 @@ nav {
   border: 2px solid lightgrey;
   border-radius: 50px;
   margin: 15px;
+}
+
+.chips:hover {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
 }
 
 .chips-icon {
@@ -368,6 +374,12 @@ nav {
 /*
   Card-Main
 */
+
+.card-col .card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .card-row .card-main > div {
   padding: 5px;
