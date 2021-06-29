@@ -14,6 +14,17 @@ body > * {
   padding-right: 2.5%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*
   * Global properties
 */
@@ -59,57 +70,42 @@ body > * {
 }
 
 /* 
-  Header
+  * Header
 */
 
-header {
+nav {
   display: flex;
   justify-content: space-between;
 }
 
-nav li {
+.logo {
+  padding-top: 40px;
+}
+
+/*
+  Navbar
+*/
+
+.navbar {
+  display: flex;
+}
+
+.navbar li {
   margin-top: 0;
   padding: 30px;
+  padding-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-  footer > div {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  footer {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-top: 10px;
-}
-
-#active {
+.active {
   border-top: 3px solid #0065fc;
 }
 
-#active a {
+.active a {
   color: #0065fc;
+}
+
+#anchor {
+  display: flex;
 }
 
 #register {
@@ -117,12 +113,121 @@ li {
   font-weight: bold;
 }
 
-.navbar {
+/*
+  * Filters & recherche
+*/
+
+#search {
   display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  margin-bottom: 10px;
 }
 
 /*
-  Hébergement et plus populaires et activite
+  Chips
+*/
+
+.chips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid lightgrey;
+  border-radius: 50px;
+  margin: 15px;
+}
+
+.chips-icon {
+  background-color: #DEEBFF;
+  color: #0065fc;
+  padding: 1em;
+  border-radius: 100%;
+}
+
+.chips-content {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+/*
+  Input-Group
+*/
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-group .input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 15px 0 0 15px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.input-group input {
+  border: 1px solid #f2f2f2;
+  height: 46px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.input-group button {
+  border: none;
+  background-color: #0065fc;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 700;
+  height: 50px;
+}
+
+.input-group button:hover {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
+}
+
+.input-group .desktop {
+  display: inline-block;
+}
+
+.input-group .mobile {
+  display: none;
+}
+
+/*
+  Info-Container
+*/
+
+.info-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-container i {
+  margin-right: 10px;
+  color: #0065fc;
+  border: 1px solid lightgrey;
+  border-radius: 100%;
+  font-size: 12px;
+  padding: 5px 9px 5px 9px;
+}
+
+/*
+  * Hébergement et plus populaires et activite
 */
 
 #heberge, #popular {
@@ -181,7 +286,7 @@ li {
 }
 
 /*
-  * Card Type
+  Card Type
 */
 
 .cards-grid {
@@ -218,7 +323,7 @@ li {
 }
 
 /* 
-  * Card-Media
+  Card-Media
 */
 
 .card-col .card-media {
@@ -243,7 +348,7 @@ li {
 }
 
 /*
-  * Card-Content
+  Card-Content
 */
 
 
@@ -261,7 +366,7 @@ li {
 }
 
 /*
-  * Card-Main
+  Card-Main
 */
 
 .card-row .card-main > div {
@@ -269,7 +374,7 @@ li {
 }
 
 /* 
-  * Card-title
+  Card-title
 */
 
 .card-title {
@@ -277,7 +382,7 @@ li {
 }
 
 /*
-  * Card-text
+  Card-text
 */
 
 .card-row .card-text {
@@ -285,7 +390,7 @@ li {
 }
 
 /*
-  * Card-rate
+  Card-rate
 */
 
 .card-rate {
@@ -306,107 +411,27 @@ li {
   grid-template-rows: repeat(2, 1fr);
 }
 
-/*
-  * Filters & recherche
+/* 
+  Footer
 */
 
-#search {
-  display: flex;
-  flex-direction: column;
-  margin: 25px;
+@media only screen and (max-width: 600px) {
+  footer > div {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.filters {
-  display: flex;
-  align-items: center;
-  font-weight: 900;
-  margin-bottom: 10px;
+@media only screen and (min-width: 992px) {
+  footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
-/*
-  Chips
-*/
-
-.chips {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid lightgrey;
-  border-radius: 50px;
-  margin: 15px;
-}
-
-.chips-icon {
-  background-color: #DEEBFF;
-  color: #0065fc;
-  padding: 1em;
-  border-radius: 100%;
-}
-
-.chips-content {
-  margin-left: 10px;
-  margin-right: 15px;
-}
-
-/*
-  Input-Group
-*/
-
-.input-group {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.input-group i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-  border-radius: 15px 0 0 15px;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
-}
-
-.input-group input {
-  border: 1px solid #f2f2f2;
-  height: 46px;
-  font-size: 16px;
-  font-weight: 700;
-  padding-left: 10px;
-}
-
-.input-group button {
-  border: none;
-  background-color: #0065fc;
-  color: white;
-  border-radius: 0 15px 15px 0;
-  font-size: 16px;
-  padding: 10px;
-  font-weight: 700;
-  height: 50px;
-}
-
-.input-group button:hover {
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
-}
-
-/*
-  Info-Container
-*/
-
-.info-container {
-  display: flex;
-  align-items: center;
-}
-
-.info-container i {
-  margin-right: 10px;
-  color: #0065fc;
-  border: 1px solid lightgrey;
-  border-radius: 100%;
-  font-size: 12px;
-  padding: 5px 9px 5px 9px;
+footer li {
+  margin-top: 10px;
 }

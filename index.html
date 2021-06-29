@@ -9,22 +9,24 @@
 </head>
 <body>
   <header>
-    <img src="assets/logo/Reservia.svg" alt="Logo">
-    <div class="navbar">
-      <nav>
-        <ul class="row-flex">
-          <li id="active"><a href="#hebergement">Hébergements</a></li>
-          <li><a href="#activite">Activités</a></li>
+    <nav>
+      <img src="assets/logo/Reservia.svg" alt="Logo" class="logo">
+      <div class="navbar">
+        <ul id="anchor">
+          <li class="active">
+            <a href="#hebergement">Hébergements</a>
+          </li>
+          <li>
+            <a href="#activite">Activités</a>
+          </li>
         </ul>
-      </nav>
-      <nav id="register">
-        <ul>
+        <ul id="register">
           <li>
             S'inscrire
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
   <main>
     <div id="search">
@@ -35,9 +37,10 @@
         En plein centre ville ou en pleine nature
       </div>
       <div class="input-group">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt input-icon"></i>
         <input type="text" value="Marseille, France">
-        <button>Rechercher</button>
+        <button class="mobile"><i class="fas fa-search"></i></button>
+        <button class="desktop">Rechercher</button>
       </div>
       <div class="filters">
         Filtres 
