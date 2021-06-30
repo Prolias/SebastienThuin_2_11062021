@@ -1,3 +1,35 @@
+/*
+  Global
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+body > * {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 5px;
+}
 
 /*
   * Global properties
@@ -5,12 +37,6 @@
 
 .row-flex {
   display: flex;
-  flex-direction: row;
-}
-
-.col-flex {
-  display: flex;
-  flex-direction: column;
 }
 
 .rounded {
@@ -38,73 +64,55 @@
 }
 
 .bold {
-  font-weight: 900;
+  font-weight: 600;
 }
 
-/*
-  * Reste
-*/
-
-body {
-  font-family: "Raleway", sans-serif;
+.section-title {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 700;
   margin: 0;
 }
 
-body > * {
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-}
+/* 
+  * Header
+*/
 
-header {
+nav {
   display: flex;
   justify-content: space-between;
 }
 
-nav li {
+.logo {
+  padding-top: 40px;
+}
+
+/*
+  Navbar
+*/
+
+.navbar {
+  display: flex;
+}
+
+.navbar li {
   margin-top: 0;
   padding: 30px;
+  padding-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-  footer > div {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  footer {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-top: 10px;
-}
-
-#active {
+.active {
   border-top: 3px solid #0065fc;
 }
 
-#active a {
+.active a {
   color: #0065fc;
+}
+
+#anchor {
+  display: flex;
 }
 
 #register {
@@ -113,172 +121,10 @@ li {
 }
 
 /*
-  * Hébergement et plus populaires
-*/
-
-#hebergement {
-  display: flex;
-}
-
-#hebergement > section {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#heberge {
-  margin-right: 10px;
-  flex-grow: 2;
-}
-
-#popular {
-  flex-grow: 1;
-}
-
-.section-title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 25px;
-  font-weight: 900;
-  padding: 15px;
-}
-
-.cards-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.card-col {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  max-width: 250px;
-  padding: 5px;
-  margin: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.card-col > .card-media {
-  display: block;
-  background-size: cover;
-  background-position: 50%;
-  border-radius: 15px 15px 0 0;
-  width: 250px;
-  height: 115px;
-}
-
-.card-col > .card-content {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-}
-
-.card-col > .card-content > div {
-  padding: 5px;
-}
-
-.card-row {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  border-radius: 20px;
-  max-width: 500px;
-  padding: 5px;
-  margin: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.card-row .card-text {
-  font-size: 12px;
-}
-
-.card-row > .card-media {
-  display: block;
-  background-size: cover;
-  background-position: 50%;
-  border-radius: 15px 0 0 15px;
-  width: 125px;
-  height: 140px;
-}
-
-.card-row > .card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 5px;
-  width: 150px;
-  padding-left: 10px;
-}
-
-.card-row .card-main > div {
-  padding: 5px;
-}
-
-.card-rate {
-  display: flex;
-  flex-direction: row;
-}
-
-.card-rate > i {
-  font-size: 12px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  max-width: 300px;
-  margin: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.card-title {
-  font-weight: bolder;
-}
-
-.card .card-media {
-  display: block;
-  background-size: cover;
-  background-position: 50%;
-  border-radius: 15px 15px 0 0;
-  height: 160px;
-}
-
-.card .card-content {
-  padding: 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.card-big {
-  grid-row: span 2;
-}
-
-.card-big .card-media {
-  height: 400px;
-}
-
-/*
   * Filters & recherche
 */
 
-#filter {
+#search {
   display: flex;
   flex-direction: column;
   margin: 25px;
@@ -287,8 +133,13 @@ li {
 .filters {
   display: flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
+
+/*
+  Chips
+*/
 
 .chips {
   display: flex;
@@ -299,20 +150,24 @@ li {
   margin: 15px;
 }
 
-.chips-content {
-  margin-left: 10px;
-  margin-right: 15px;
+.chips:hover {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
 }
 
-.chips i {
+.chips-icon {
   background-color: #DEEBFF;
   color: #0065fc;
   padding: 1em;
   border-radius: 100%;
 }
 
+.chips-content {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
 /*
-  * Input group
+  Input-Group
 */
 
 .input-group {
@@ -322,7 +177,7 @@ li {
   margin-bottom: 20px;
 }
 
-.input-group i {
+.input-group .input-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,6 +211,18 @@ li {
   box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
 }
 
+.input-group .desktop {
+  display: inline-block;
+}
+
+.input-group .mobile {
+  display: none;
+}
+
+/*
+  Info-Container
+*/
+
 .info-container {
   display: flex;
   align-items: center;
@@ -368,4 +235,223 @@ li {
   border-radius: 100%;
   font-size: 12px;
   padding: 5px 9px 5px 9px;
+}
+
+/*
+  * Hébergement et plus populaires et activite
+*/
+
+#heberge, #popular {
+  padding: 40px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+}
+
+#hebergement {
+  display: flex;
+  justify-content: space-between;
+}
+
+#activite {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#activite .section-title {
+  padding-bottom: 20px;
+}
+
+.more {
+  padding-top: 4px;
+}
+
+/*
+  Cards
+*/
+
+.card {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-media {
+  background-size: cover;
+  background-position: 50%;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-rate {
+  display: flex;
+}
+
+/*
+  Card Type
+*/
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.card-row {
+  max-width: 500px;
+  padding: 5px;
+}
+
+.card-col {
+  flex-direction: column;
+  max-width: 250px;
+  padding: 5px;
+}
+
+.card-activite {
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.card-big {
+  grid-row: span 2;
+}
+
+/* 
+  Card-Media
+*/
+
+.card-col .card-media {
+  border-radius: 15px 15px 0 0;
+  width: 250px;
+  height: 115px;
+}
+
+.card-row .card-media {
+  border-radius: 15px 0 0 15px;
+  width: 125px;
+  height: 140px;
+}
+
+.card-activite .card-media {
+  border-radius: 15px 15px 0 0;
+  height: 160px;
+}
+
+.card-big .card-media {
+  height: 400px;
+}
+
+/*
+  Card-Content
+*/
+
+
+.card-col .card-content > div {
+  padding: 5px;
+}
+
+.card-row .card-content {
+  width: 150px;
+  padding-left: 10px;
+}
+
+.card-activite .card-content {
+  padding: 10px;
+}
+
+/*
+  Card-Main
+*/
+
+.card-col .card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-row .card-main > div {
+  padding: 5px;
+}
+
+/* 
+  Card-title
+*/
+
+.card-title {
+  font-weight: bolder;
+}
+
+/*
+  Card-text
+*/
+
+.card-row .card-text {
+  font-size: 12px;
+}
+
+/*
+  Card-rate
+*/
+
+.card-rate {
+  display: flex;
+}
+
+.card-rate > i {
+  font-size: 12px;
+}
+
+/*
+  * ********
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* 
+  Footer
+*/
+
+@media only screen and (max-width: 600px) {
+  footer > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+footer li {
+  margin-top: 10px;
 }
