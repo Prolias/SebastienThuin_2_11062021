@@ -1,5 +1,5 @@
 /*
-  Global
+Global
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -35,14 +35,14 @@ p {
   body {
     width: 100%;
   }
-
+  
   body > * {
     padding: 0;
   }
 }
 
 /*
-  * Global properties
+* Global properties
 */
 
 .row-flex {
@@ -87,7 +87,7 @@ p {
 }
 
 /* 
-  * Header
+* Header
 */
 
 nav {
@@ -108,30 +108,30 @@ nav.mobile {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  
   nav.desktop {
     display: none;
   }
-
+  
   nav.mobile {
     display: flex;
     flex-direction: column;
   }
-
+  
   .top-nav {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-
+  
   .logo {
     padding-top: 0;
   }
 }
 
 /*
-  Navbar
+Navbar
 */
 
 .navbar {
@@ -165,17 +165,17 @@ nav.mobile {
   .navbar {
     flex-direction: column;
   }
-
+  
   #anchor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
+  
   #anchor li {
     border-bottom: 3px solid #f2f2f2;
     padding-bottom: 15px;
   }
-
+  
   #anchor li.active {
     border-top: 0;
     border-bottom: 3px solid #0065fc;
@@ -183,7 +183,7 @@ nav.mobile {
 }
 
 /*
-  * Filters & recherche
+* Filters & recherche
 */
 
 #search {
@@ -217,7 +217,7 @@ nav.mobile {
 }
 
 /*
-  Chips
+Chips
 */
 
 .chips {
@@ -245,8 +245,17 @@ nav.mobile {
   margin-right: 15px;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .chips {
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+}
+
 /*
-  Input-Group
+Input-Group
 */
 
 .input-group {
@@ -299,33 +308,37 @@ nav.mobile {
 }
 
 @media only screen and (max-width: 600px) {
+  .input-group {
+    width: 100%;
+  }
+
   .input-group .input-icon {
     padding-left: 15px;
     padding-right: 17px;
   }
-
+  
   .input-group button {
     padding-left: 17px;
     padding-right: 17px;
     border-radius: 15px;
   }
-
+  
   .input-group input {
     width: 100%;
   }
-
+  
   .input-group .mobile {
     display: flex;
     align-items: center;
   }
-
+  
   .input-group .desktop {
     display: none;
   }
 }
 
 /*
-  Info-Container
+Info-Container
 */
 
 .info-container {
@@ -343,7 +356,7 @@ nav.mobile {
 }
 
 /*
-  * Hébergement et plus populaires et activite
+* Hébergement et plus populaires et activite
 */
 
 #heberge, #popular {
@@ -371,27 +384,33 @@ nav.mobile {
 }
 
 @media only screen and (max-width: 600px) {
+  #heberge, #popular {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
   #hebergement {
     flex-direction: column;
   }
-
+  
   #heberge {
     background-color: #FFFFFF;
   }
-
+  
   #popular {
-    border-radius: 0;
     order: -1;
   }
-
+  
   #activite {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 40px 20px;
   }
 }
 
 /*
-  Cards
+Cards
 */
 
 .card {
@@ -425,7 +444,7 @@ nav.mobile {
 }
 
 /*
-  Card Type
+Card Type
 */
 
 .cards-grid {
@@ -466,10 +485,14 @@ nav.mobile {
     display: flex;
     flex-direction: column;
   }
+
+  .card {
+    max-width: 100%;
+  }
 }
 
 /* 
-  Card-Media
+Card-Media
 */
 
 .card-col .card-media {
@@ -493,8 +516,23 @@ nav.mobile {
   height: 400px;
 }
 
+@media only screen and (max-width: 600px) {
+  .card-col .card-media {
+    width: 100%;
+  }
+  
+  .card-big .card-media {
+    height: 130px;
+  }
+
+  .card-activite .card-media {
+    height: 130px;
+  }
+}
+
+
 /*
-  Card-Content
+Card-Content
 */
 
 
@@ -512,7 +550,7 @@ nav.mobile {
 }
 
 /*
-  Card-Main
+Card-Main
 */
 
 .card-col .card-main {
@@ -526,7 +564,7 @@ nav.mobile {
 }
 
 /* 
-  Card-title
+Card-title
 */
 
 .card-title {
@@ -534,7 +572,7 @@ nav.mobile {
 }
 
 /*
-  Card-text
+Card-text
 */
 
 .card-row .card-text {
@@ -542,7 +580,7 @@ nav.mobile {
 }
 
 /*
-  Card-rate
+Card-rate
 */
 
 .card-rate {
@@ -554,7 +592,7 @@ nav.mobile {
 }
 
 /*
-  * ********
+* ********
 */
 
 .grid {
@@ -571,23 +609,28 @@ nav.mobile {
 }
 
 /* 
-  Footer
+Footer
 */
 
+footer {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-bottom: 50px;
+  }
+
   footer > div {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  footer {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 
