@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>Reservia</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/f9c835562d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="desktop">
       <img src="assets/logo/Reservia.svg" alt="Logo" class="logo">
       <div class="navbar">
         <ul id="anchor">
@@ -22,6 +23,24 @@
         <ul id="register">
           <li>
             S'inscrire
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="mobile">
+      <div class="top-nav">
+        <img src="assets/logo/Reservia.svg" alt="Logo" class="logo">
+        <a id="register">
+          S'inscrire
+        </a>
+      </div>
+      <div class="navbar">
+        <ul id="anchor">
+          <li class="active">
+            <a href="#hebergement">Hébergements</a>
+          </li>
+          <li>
+            <a href="#activite">Activités</a>
           </li>
         </ul>
       </div>
@@ -42,22 +61,26 @@
         <button class="desktop">Rechercher</button>
       </div>
       <div class="filters">
-        Filtres 
-        <div class="chips">
-          <i class="fas fa-money-bill-wave chips-icon"></i>
-          <div class="chips-content">Économique</div>
+        <div>
+          Filtres
         </div>
-        <div class="chips">
-          <i class="fas fa-child chips-icon"></i>
-          <div class="chips-content">Familial</div>
-        </div>
-        <div class="chips">
-          <i class="fas fa-heart chips-icon"></i>
-          <div class="chips-content">Romantique</div>
-        </div>
-        <div class="chips">
-          <i class="fas fa-dog chips-icon"></i>
-          <div class="chips-content">Animaux autorisés</div>
+        <div class="chips-group">
+          <div class="chips">
+            <i class="fas fa-money-bill-wave chips-icon"></i>
+            <div class="chips-content">Économique</div>
+          </div>
+          <div class="chips">
+            <i class="fas fa-child chips-icon"></i>
+            <div class="chips-content">Familial</div>
+          </div>
+          <div class="chips">
+            <i class="fas fa-heart chips-icon"></i>
+            <div class="chips-content">Romantique</div>
+          </div>
+          <div class="chips">
+            <i class="fas fa-dog chips-icon"></i>
+            <div class="chips-content">Animaux autorisés</div>
+          </div>
         </div>
       </div>
       <p class="info-container">
