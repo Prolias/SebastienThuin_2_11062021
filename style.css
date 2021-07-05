@@ -216,6 +216,12 @@ Navbar
   }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .chips-group {
+    flex-wrap: wrap;
+  }
+}
+
 /*
 Chips
 */
@@ -409,6 +415,20 @@ Info-Container
   }
 }
 
+@media only screen and (max-width: 992px) {
+  #hebergement {
+    flex-direction: column;
+  }
+
+  #heberge {
+    background-color: #FFFFFF;
+  }
+
+  #popular {
+    order: -1;
+  }
+}
+
 /*
 Cards
 */
@@ -491,6 +511,26 @@ Card Type
   }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .card-row {
+    width: 100%;
+  }
+
+  .card-flex {
+    align-items: center;
+  }
+
+  .cards-grid {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-activite {
+    width: 100%;
+  }
+}
+
 /* 
 Card-Media
 */
@@ -527,6 +567,16 @@ Card-Media
 
   .card-activite .card-media {
     height: 130px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .card-row .card-media {
+    width: 40%;
+  }
+
+  .card-big .card-media {
+    height: 160px;
   }
 }
 
@@ -605,6 +655,14 @@ Card-rate
   .grid {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
