@@ -152,11 +152,11 @@ Navbar
   color: #0065fc;
 }
 
-#anchor {
+.anchor {
   display: flex;
 }
 
-#register {
+.register {
   color: #0065fc;
   font-weight: bold;
 }
@@ -166,17 +166,17 @@ Navbar
     flex-direction: column;
   }
   
-  #anchor {
+  .anchor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   
-  #anchor li {
+  .anchor li {
     border-bottom: 3px solid #f2f2f2;
     padding-bottom: 15px;
   }
   
-  #anchor li.active {
+  .anchor li.active {
     border-top: 0;
     border-bottom: 3px solid #0065fc;
   }
