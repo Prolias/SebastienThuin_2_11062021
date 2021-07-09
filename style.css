@@ -61,6 +61,10 @@ p {
   color: #DEEBFF;
 }
 
+.grey {
+  color: #f2f2f2;
+}
+
 .bg-blue {
   background-color: #0065fc;
 }
@@ -373,7 +377,8 @@ Info-Container
 
 #hebergement {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
